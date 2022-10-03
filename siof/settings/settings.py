@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # apps de terceiros
+    'django_extensions',
     # apps do projeto
     "users.apps.UsersConfig",
 ]
