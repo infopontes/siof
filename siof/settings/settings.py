@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # apps de terceiros
     'django_extensions',
     # apps do projeto
+    "unidade.apps.UnidadeConfig",
     "users.apps.UsersConfig",
     'core.apps.CoreConfig',
 ]
