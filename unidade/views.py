@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+def unidade_list(request):
+    template_name = 'unidade/unidade_list.html'
+    return render(request, template_name)
