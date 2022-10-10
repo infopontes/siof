@@ -12,7 +12,7 @@ class ComandoMilitarArea(models.Model):
         ordering = ['abreviatura']
 
     def __str__(self):
-        return self.abreviatura + ' - ' + self.nome
+        return self.abreviatura
 
 
 class RegiaoMilitar(models.Model):
@@ -28,7 +28,7 @@ class RegiaoMilitar(models.Model):
         ordering = ['abreviatura']
 
     def __str__(self):
-        return self.abreviatura + ' - ' + self.nome
+        return self.abreviatura
 
 
 class Unidade(models.Model):
