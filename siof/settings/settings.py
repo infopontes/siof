@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     # apps de terceiros
     'django_extensions',
     # apps do projeto
+    'despesa.apps.DespesaConfig',
+    'tipoDespesa.apps.TipodespesaConfig',
     'ptrab.apps.PtrabConfig',
     'tipoPtrab.apps.TipoptrabConfig',
     'documento.apps.DocumentoConfig',
