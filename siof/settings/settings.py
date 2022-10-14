@@ -26,7 +26,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # apps de terceiros
+    'drf_yasg',
+    'rest_framework',
     'django_extensions',
+    'django_seed',
     # apps do projeto
     'localidade.apps.LocalidadeConfig',
     'despesa.apps.DespesaConfig',
