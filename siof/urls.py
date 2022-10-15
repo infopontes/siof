@@ -7,11 +7,11 @@ from drf_yasg import openapi
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="Snippets API",
+        title="SIOFI API",
         default_version='v1',
-        description="Test description",
-        terms_of_service="https://www.google.com/policies/terms/",
-        contact=openapi.Contact(email="contact@snippets.local"),
+        description="API para integração entre sistemas de gestão financeira das operações.",
+        terms_of_service="https://www.coter.eb.mil.br/policies/terms/",
+        contact=openapi.Contact(email="mpontes@coter.eb.mil.br"),
         license=openapi.License(name="BSD License"),
     ),
     public=True,
@@ -19,10 +19,13 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
-    path('', include('tipoPtrab.urls', namespace='tipoptrab')),
-    path('', include('ptrab.urls', namespace='ptrab')),
     path('', include('despesa.urls', namespace='despesa')),
+    path('', include('documento.urls', namespace='documento')),
     path('', include('localidade.urls', namespace='localidade')),
+    path('', include('ptrab.urls', namespace='ptrab')),
+    path('', include('tipoDespesa.urls', namespace='tipodespesa')),
+    path('', include('tipoPtrab.urls', namespace='tipoptrab')),
+    path('', include('unidade.urls', namespace='unidades')),
     path('', include('core.urls', namespace='core')),
     path('unidade/', include('unidade.urls', namespace='unidade')),
     path('admin/', admin.site.urls),
