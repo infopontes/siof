@@ -19,6 +19,9 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
+    # para aparecer a tela de login e logout da api
+    path('accounts/', include('django.contrib.auth.urls')),
+    # urls da api
     path('', include('despesa.urls', namespace='despesa')),
     path('', include('documento.urls', namespace='documento')),
     path('', include('localidade.urls', namespace='localidade')),
@@ -27,6 +30,7 @@ urlpatterns = [
     path('', include('tipoPtrab.urls', namespace='tipoptrab')),
     path('', include('unidade.urls', namespace='unidades')),
     path('', include('core.urls', namespace='core')),
+    # url das páginas
     path('unidade/', include('unidade.urls', namespace='unidade')),
     path('admin/', admin.site.urls),
 ]

@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     # apps de terceiros
     'drf_yasg',
     'rest_framework',
+    'rest_framework.authtoken',
     'django_extensions',
     'django_seed',
     # apps do projeto
@@ -41,6 +42,17 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'core.apps.CoreConfig',
 ]
+
+
+REST_FRAMEWORK = {
+     'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -124,4 +136,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # adicionar app usuários personalizados
 AUTH_USER_MODEL = "users.User"
+
+# utilizado para abriar a tela de login e fazer autenticação da api via admin
+LOGIN_URL = '/admin/login/'
 
