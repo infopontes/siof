@@ -27,7 +27,8 @@ class DespesaViewSet(viewsets.ModelViewSet):
     queryset = Despesa.objects.all()
     serializer_class = DespesaSerializer
     authentication_classes = (BasicAuthentication, SessionAuthentication, TokenAuthentication)
-    permission_classes = (IsAuthenticated,)
+    #permission_classes = (IsAuthenticated,)
+    permission_classes = (DjangoModelPermissions,)
 
 class DespesaAutenticationView(APIView):
 
