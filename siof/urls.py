@@ -31,7 +31,8 @@ urlpatterns = [
     path('', include('unidade.urls', namespace='unidades')),
     path('', include('core.urls', namespace='core')),
     # url das páginas
-    path('unidade/', include('unidade.urls', namespace='unidade')),
+    #path('despesa/', include('despesa.urls')),
+    path('unidade/', include('unidade.urls')),
     path('admin/', admin.site.urls),
 ]
 
