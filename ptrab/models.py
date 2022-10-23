@@ -20,4 +20,4 @@ class Ptrab(models.Model):
         ordering = ['numero']
 
     def __str__(self):
-        return self.numero
+        return str(self.numero) + "-" + self.operacao

@@ -17,4 +17,4 @@ class Documento(models.Model):
         ordering = ['numero']
 
     def __str__(self):
-        return self.numero + ' - ' + self.secao
+        return str(self.numero) + ' - ' + self.secao
