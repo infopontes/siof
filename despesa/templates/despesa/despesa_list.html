@@ -1,0 +1,111 @@
+<!-- expense_list.html -->
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container-fluid p-3 text-primary">
+        <h3>Cadastro de itens dos Planos de Trabalho</h3>
+    </div>
+  <div class="row">
+    <div class="col">
+      <form
+        class="form-inline p-1"
+        hx-post="{ url 'despesa:despesa_create' %}"
+        hx-target="#despesaTbody"
+        hx-indicator=".htmx-indicator"
+        hx-swap="afterbegin"
+      >
+        {% csrf_token %}
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th>PTrab</th>
+                <th>Tipo despesa</th>
+                <th>OM</th>
+                <th>ND</th>
+                <th>Valor (R$)</th>
+                <th>Memória de Calculo</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for field in form %}
+                <td>
+                    {{ field }}
+                    {{ field.errors }}
+                    {% if field.help_text %}
+                        <small class="text-muted">{{ field.help_text|safe }}</small>
+                    {% endif %} 
+                    </td>
+                {% endfor %}
+                <td>
+                <div class="form-group">
+                <button
+                    type="submit"
+                    class="btn btn-primary ml-2"
+                >Adicionar</button>
+                </div>
+            </td>  
+        <tbody>
+        </table> 
+
+      </form>
+  </div>
+  </div>
+
+  <div
+    class="col"
+    hx-include="#checkedDespesas"
+    hx-target="#despesaTbody"
+  >
+    <a
+      class="btn btn-outline-success"
+      hx-post="{ url 'despesa:despesa_paid' %}"
+    >Aprovada</a>
+    <a
+      class="btn btn-outline-danger"
+      hx-post="{ url 'despesa:despesa_no_paid' %}"
+    >Revisar</a>
+    <span class="lead"><strong>Atualizar Status</strong></span>
+  </div>
+
+  <div
+    id="checkedDespesas"
+    class="col pt-2"
+  >
+    <form>  <!-- Este form é importante pra editar os dados -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Tipo despesa</th>
+            <th>OM</th>
+            <th>ND</th>
+            <th>Valor (R$)</th>
+            <th>Memória de Calculo</th>
+            <th class="text-center">Status</th>
+            <th class="text-center">Ações</th>
+          </tr>
+        </thead>
+        <tbody id="despesaTbody">
+          {% include "./despesa_table.html" %}
+        </tbody>
+      </table>
+    </form>
+  </div>
+
+{% endblock content %}
+
+{% block js %}
+  <script>
+    document.body.addEventListener('htmx:configRequest', (event) => {
+      event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
+    });
+    htmx.on("htmx:afterSwap", function(evt) {
+      if (evt.target.id == 'despesaTbody') {
+        document.getElementById('id_description').value = ''
+        document.getElementById('id_value').value = ''
+      }
+    });
+  </script>
+{% endblock js %}
