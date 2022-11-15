@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-11-15T12:16:19.032Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" version="20.5.3" etag="DePawfMLPtAChgTWchE6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-11-15T12:26:06.734Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" version="20.5.3" etag="M4mLfPSTMa7QItOEaZQQ" type="github">
   <diagram id="rJ9PqX_T0WEqXx7k9vru" name="Fluxograma">
-    <mxGraphModel dx="1422" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1422" dy="697" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -37,7 +37,7 @@
         <mxCell id="41" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#33FF33;strokeWidth=1;" parent="18" vertex="1">
           <mxGeometry x="8" y="70.00999999999999" width="150" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="37" value="&lt;font color=&quot;#000000&quot;&gt;&lt;span&gt;Recebe,&lt;/span&gt;&lt;br&gt;&lt;span&gt;analisa, e&lt;/span&gt;&lt;br&gt;&lt;span&gt;despacha o&lt;/span&gt;&lt;br&gt;&lt;span&gt;&amp;nbsp;DOR e&lt;/span&gt;&lt;br&gt;&lt;span&gt;&amp;nbsp;PTrab&lt;/span&gt;&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;rounded=1;shadow=0;sketch=0;glass=0;" parent="18" vertex="1">
+        <mxCell id="37" value="&lt;font color=&quot;#000000&quot;&gt;&lt;span&gt;Recebe&amp;nbsp;&lt;/span&gt;&lt;span&gt;e&lt;/span&gt;&lt;br&gt;&lt;span&gt;despacha o&lt;/span&gt;&lt;br&gt;&lt;span&gt;&amp;nbsp;DOR e&lt;/span&gt;&lt;br&gt;&lt;span&gt;&amp;nbsp;PTrab&lt;/span&gt;&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;rounded=1;shadow=0;sketch=0;glass=0;" parent="18" vertex="1">
           <mxGeometry x="22" y="75" width="136" height="115" as="geometry" />
         </mxCell>
         <mxCell id="48" value="&lt;font color=&quot;#000000&quot;&gt;Envia documentos para o MD&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;rounded=1;shadow=0;sketch=0;glass=0;" parent="18" vertex="1">
